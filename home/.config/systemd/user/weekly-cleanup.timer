@@ -1,5 +1,5 @@
 [Unit]
-Description=Limpieza semanal (domingo 11:00)
+Description=Weekly cleanup (Sunday 11:00, catches up after downtime)
 
 [Timer]
 OnCalendar=Sun 11:00

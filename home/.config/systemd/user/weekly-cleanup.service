@@ -1,0 +1,8 @@
+[Unit]
+Description=Weekly cleanup of Rust target/ dirs, package caches and Docker leftovers
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/weekly-cleanup.sh
+Nice=19
+IOSchedulingClass=idle

@@ -1,0 +1,4 @@
+# Debug builds keep only line tables (enough for backtraces, not for stepping in a debugger).
+# Cuts target/ size substantially. Override per project with [profile.dev] debug = true.
+[profile.dev]
+debug = "line-tables-only"
