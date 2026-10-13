@@ -1,0 +1,8 @@
+[Unit]
+Description=Limpieza semanal de target/, cachés y Docker
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/limpieza-semanal.sh
+Nice=19
+IOSchedulingClass=idle
