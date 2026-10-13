@@ -49,7 +49,6 @@ and line numbers, but `target/` shrinks a lot. Set `debug = true` in a project's
 | `.config/fish/config.fish` | PATH per platform (Linux / macOS / Termux), brew, zoxide, atuin, fzf (Ctrl+R only), carapace completions, abbreviations, color theme |
 | `.config/fish/fish_plugins` | Plugins installed by [fisher](https://github.com/jorgebucaran/fisher) on first launch |
 | `.config/fish/functions/fish_prompt.fish` | Minimal prompt: directory, git branch, ✗ on error |
-| `.config/fish/functions/qreply.fish` | Reply to mail on a self-hosted server over SSH |
 | `.config/fish/functions/tmux.fish` | Forces 256 colors |
 | `.config/fish/conf.d/fnm.fish` | fnm (Node version manager) init |
 
