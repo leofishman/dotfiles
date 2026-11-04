@@ -81,6 +81,10 @@ set -g fish_greeting ""
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
+# Claude Code: no spinner in the terminal title. With several sessions running, the
+# title updates flood Cinnamon's window tracking (suspected black-screen trigger, 2026-10-21).
+set -gx CLAUDE_CODE_DISABLE_TERMINAL_TITLE 1
+
 ## aliases / abbreviations (abbr expands on space — less typing)
 if test (uname) = Darwin
     alias ls='ls --color=auto'
@@ -151,7 +155,6 @@ fish_add_path $HOME/bin $HOME/.local/share/solana/install/active_release/bin
 alias cr='ddev drush cr'
 alias dcrestart='docker compose down && docker compose up -d'
 alias ttmux='tmux attach'
-alias vpn='ip link show wg0 >/dev/null 2>&1 && sudo wg-quick down wg0; sudo wg-quick up wg0'
+# vpn: a function in functions/vpn.fish (it does not bring the tunnel up at home)
 
-# Node for the pi agent
-fish_add_path "$HOME/.nvm/versions/node/v24.3.0/bin"
+abbr -a yt2a "$HOME/Proyects/youtube-to-actions/target/debug/yt2action"
